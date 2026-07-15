@@ -1,0 +1,153 @@
+.navbar {
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  gap: 24px;
+}
+
+.nav-title-link {
+  text-decoration: none;
+}
+
+.nav-title {
+  color: #ff3f6c;
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 10px 16px;
+  gap: 10px;
+  flex: 1;
+  max-width: 500px;
+  background: #f5f5f6;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.95rem;
+  width: 100%;
+  color: #333;
+}
+
+.nav-right {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #282c3f;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+}
+
+.nav-icon-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  padding: 0 40px 12px;
+}
+
+.nav-link {
+  color: #282c3f;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  color: #ff3f6c;
+}
+
+.nav-link.active {
+  color: #ff3f6c;
+  border-bottom-color: #ff3f6c;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #282c3f;
+}
+
+@media (max-width: 768px) {
+  .nav-top {
+    padding: 12px 16px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .nav-icon-label {
+    display: none;
+  }
+
+  .search-box {
+    order: 3;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .nav-right {
+    gap: 18px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 0;
+  }
+
+  .nav-link.active {
+    background: #fff0f3;
+    border-bottom: 1px solid #f0f0f0;
+  }
+}
